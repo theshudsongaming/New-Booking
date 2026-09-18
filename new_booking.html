@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="NEW BOOKING">
+  <title>NEW BOOKING</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f5f5f7;
+      color: #111;
+    }
+    header {
+      background: #fff;
+      padding: 18px 14px 14px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    h1 { font-size: 22px; margin: 0; }
+    p { font-size: 14px; margin: 5px 0 0; color: #555; }
+    main {
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 10px 6px 30px;
+      overflow: hidden;
+    }
+    #taxicaller-booking-form {
+      width: 100% !important;
+      max-width: 100%;
+      min-height: 1200px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>NEW BOOKING</h1>
+  <p>Enter the customer's booking below</p>
+</header>
+<main>
+  <!-- TaxiCaller Booking Form -->
+  <div id="taxicaller-booking-form" style="width:100%"></div>
+  <script src="https://passenger.taxicaller.net/embed/embed-v1.0.0.js"></script>
+  <script>
+    new TaxiCaller.PassengerApp({
+      element: '#taxicaller-booking-form',
+      app: 'taxicaller',
+      company: 54187,
+      heightDesktop: '700px',
+      heightMobile: '1200px',
+      mobileBreakpoint: '992px',
+      returnMessage: 'Return to NEW BOOKING'
+    });
+  </script>
+  <!-- End TaxiCaller Booking Form -->
+</main>
+</body>
+</html>
